@@ -1,0 +1,119 @@
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir.eot') format('eot');
+    src: url('../fonts/Vazir.woff2') format('woff2'),
+        url('../fonts/Vazir.woff') format('woff'),
+        url('../fonts/Vazir.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: Vazir !important;
+    direction: rtl;
+}
+
+button,
+input {
+    font-family: Vazir !important;
+}
+
+$Corporate-color :#faa000;
+
+@mixin centeringElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($second) {
+    transition: all $second ease-in-out;
+    -webkit-transition: all $second ease-in-out;
+    -moz-transition: all $second ease-in-out;
+    -ms-transition: all $second ease-in-out;
+    -o-transition: all $second ease-in-out;
+}
+
+@mixin transform-rotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+
+@mixin section-header($color) {
+    color: $color;
+    border-right: 4px solid $Corporate-color;
+    padding: .8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    @media (max-width : 992px) {
+        font-size: 1.3rem;
+        padding: .7rem;
+    }
+
+    @media (max-width : 576px) {
+        font-size: 1.1rem
+    }
+}
+
+@mixin footer-form-styling {
+    padding: .7rem 1.2rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+@mixin footer-head {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    color: $Corporate-color;
+
+    @media (max-width : 768px) {
+        color: white;
+    }
+}
+
+@mixin footer-list-item-styling {
+    padding: 25px 0;
+    border-bottom: 1px solid $Corporate-color;
+}
+
+@mixin footer-list-link-styling {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin footer-desc-head-styling {
+    color: $Corporate-color;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: .9rem;
+}
+
+@mixin footer-desc-paragraph-styling {
+    color: rgb(202, 202, 202);
+    font-size: .8rem;
+}
+
+@mixin footer-img-styling {
+    width: 80px;
+    height: 50px;
+}
+
+.container {
+    width: 1400px;
+    margin: auto;
+
+    @media (max-width : 1200px) {
+        width: 90%;
+    }
+}
